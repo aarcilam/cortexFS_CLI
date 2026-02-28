@@ -33,6 +33,19 @@ bun run install:bin
 
 Después de la instalación, el comando `cortex` estará disponible globalmente.
 
+## Integración con Agentes de IA
+
+Para que tu agente de IA (Cursor, Copilot, etc.) use automáticamente CortexFS como memoria persistente, instala el skill en tu proyecto:
+
+```bash
+npx skills add aarcilam/cortexFS_agent_skill
+```
+
+Esto permite que el agente:
+- 🔍 **Busque primero** en la memoria antes de responder
+- 💾 **Guarde automáticamente** decisiones y conocimiento importante
+- 🔄 **Retome contexto** entre sesiones sin perder información
+
 ## Configuración Inicial
 
 Antes de usar el CLI, configura el directorio raíz donde se almacenará la memoria:
