@@ -1,12 +1,19 @@
 {
-  "name": "cortexfs_cli",
-  "module": "index.ts",
+  "name": "cortexfs",
+  "version": "0.1.0",
   "type": "module",
   "private": true,
+  "scripts": {
+    "build": "bun build index.ts --outdir dist --target bun",
+    "build:bin": "bun build index.ts --compile --outfile dist/cortex",
+    "install:bin": "mv dist/cortex /usr/local/bin/cortex",
+    "dev": "bun run index.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "commander": "^14.0.3"
+  },
   "devDependencies": {
     "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
   }
 }
