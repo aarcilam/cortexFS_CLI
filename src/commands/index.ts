@@ -4,6 +4,7 @@ import { registerKnowledgeCommands } from "./knowledge";
 import { registerSearchCommand } from "./search";
 import { registerListCommand } from "./list";
 import { registerSessionCommands } from "./session";
+import { registerDashboardCommand } from "./dashboard";
 
 export function registerAllCommands(program: Command): void {
   registerConfigCommand(program);
@@ -11,4 +12,5 @@ export function registerAllCommands(program: Command): void {
   registerSearchCommand(program);
   registerListCommand(program);
   registerSessionCommands(program);
+  registerDashboardCommand(program);
 }
